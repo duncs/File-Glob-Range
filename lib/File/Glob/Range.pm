@@ -1,18 +1,21 @@
+use strict;
+use warnings;
+
 package File::Glob::Range;
-# ABSTACT: this is the module abstract
+# ABSTRACT: Add the brace based range sequence found in Bash EXPANSIONS to File::Glob
 
 =head1 SYNOPSIS
 
 use File::Glob::Range;
-my @some_info='here;
+my @list = glob('range{0..5}');
 
 =head1 DESCRIPTION
 
-A description about the module
+This module adds in the numbered range specification as found in Bash EXPANSIONS 
+(see the bash S<man> page) to the C<glob> method call.  All other functionality 
+remains the same.
 
 =cut
 
-use strict;
-use warnings;
 
 1;
